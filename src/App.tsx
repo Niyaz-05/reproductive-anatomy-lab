@@ -1,0 +1,221 @@
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import { LabProvider, useLab } from './app/LabContext';
+import type { LabInit, Mode } from './app/state';
+import { currentStep } from './app/state';
+import { BODY_MODES, MODE_BODY } from './app/modes';
+import type { Body } from './contract/schema';
+import { validateDefinition } from './contract/validate';
+import { DEFINITIONS } from './repro/definition';
+import { LabViewer } from './viewer/LabViewer';
+import { StructurePanel } from './ui/StructurePanel';
+import { DetailPanel } from './ui/DetailPanel';
+import { BirthPanel, ContraceptionPanel, CyclePanel, DisordersPanel, FertilisationPanel, PregnancyPanel, SpermPanel } from './ui/ModePanels';
+import { CloseUpPanel } from './ui/CloseUpPanel';
+import { TourPanel } from './ui/TourPanel';
+import { AboutSheet } from './ui/AboutSheet';
+import type { ViewInsets } from './viewer/CameraRig';
+
+/** Window size, for laying the model out around the floating panels. */
+function useWindowSize() {
+  const [size, setSize] = useState(() => ({ w: window.innerWidth, h: window.innerHeight }));
+  useEffect(() => {
+    const onResize = () => setSize({ w: window.innerWidth, h: window.innerHeight });
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+  return size;
+}
+
+/** Space the floating panels take, matching the breakpoints in styles.css. */
+function panelInsets(w: number, h: number, hasSheet: boolean): ViewInsets {
+  if (w <= 767) return { left: 0, right: 0, top: 220, bottom: hasSheet ? Math.round(h * 0.46) + 120 : 100 };
+  const compact = w <= 1100;
+  return { left: compact ? 266 : 318, right: hasSheet ? (compact ? 336 : 388) : 0, top: 70, bottom: 80 };
+}
+
+const MODES: { id: Mode; label: string }[] = [
+  { id: 'explore', label: 'Anatomy' },
+  { id: 'cycle', label: 'Cycle' },
+  { id: 'fertilisation', label: 'Fertilisation' },
+  { id: 'pregnancy', label: 'Pregnancy' },
+  { id: 'birth', label: 'Birth & milk' },
+  { id: 'sperm', label: 'Sperm' },
+  { id: 'contraception', label: 'Contraception' },
+  { id: 'disorders', label: 'Disorders' },
+  { id: 'tour', label: 'Guided tour' },
+];
+
+/** Quick flights to a region of the body. */
+const REGIONS: Record<Body, { label: string; ids: string[] }[]> = {
+  female: [
+    { label: 'Pelvis', ids: ['uterus', 'ovary-left', 'ovary-right', 'uterine-tube-left', 'uterine-tube-right', 'urinary-bladder', 'rectum'] },
+    { label: 'Uterus', ids: ['uterus'] },
+    { label: 'Vulva', ids: ['vulva'] },
+    { label: 'Breasts', ids: ['breast-left', 'breast-right'] },
+  ],
+  male: [
+    { label: 'Pelvis', ids: ['prostate', 'urinary-bladder', 'seminal-vesicle-left', 'seminal-vesicle-right', 'rectum'] },
+    { label: 'Testes', ids: ['testis-left', 'testis-right', 'epididymis-left', 'epididymis-right'] },
+    { label: 'Penis', ids: ['penis'] },
+  ],
+};
+
+function Toolbar({ structuresOpen, onStructures }: { structuresOpen: boolean; onStructures: () => void }) {
+  const { def, state, dispatch } = useLab();
+  return (
+    <div className="dock glass" role="toolbar" aria-label="View controls">
+      <button type="button" className="mobile-only dock-structures" aria-pressed={structuresOpen} onClick={onStructures}>Structures</button>
+      <div className="seg" role="group" aria-label="Camera views">
+        {def.cameraPresets.map((c) => (
+          <button key={c.id} type="button" aria-pressed={state.camera.preset === c.id && !state.camera.focus.length} onClick={() => dispatch({ type: 'camera', preset: c.id })}>{c.label}</button>
+        ))}
+      </div>
+      <span className="dock-sep" aria-hidden="true" />
+      <div className="seg regions" role="group" aria-label="Fly to a region">
+        {REGIONS[def.body].map((r) => <button key={r.label} type="button" onClick={() => dispatch({ type: 'camera', preset: 'anterior', focus: r.ids })}>{r.label}</button>)}
+      </div>
+      <span className="dock-sep" aria-hidden="true" />
+      <label className="check toolbar-check">
+        <input type="checkbox" checked={state.labels} onChange={(e) => dispatch({ type: 'set-labels', value: e.target.checked })} />
+        Labels
+      </label>
+      <button type="button" className="secondary" onClick={() => dispatch({ type: 'camera', preset: state.camera.preset })} title="Fit the model in view">Fit</button>
+      <button type="button" className="secondary" onClick={() => dispatch({ type: 'reset' })} title="Reset camera, layers, selection and mode">Reset</button>
+    </div>
+  );
+}
+
+/** Right-hand sheet: shown only when there is something to show. */
+function SidePanel() {
+  const { state } = useLab();
+  if (state.mode === 'tour') return <TourPanel />;
+  if (state.selected) return <DetailPanel />;
+  if (state.closeUp) return <CloseUpPanel />;
+  switch (state.mode) {
+    case 'cycle': return <CyclePanel />;
+    case 'fertilisation': return <FertilisationPanel />;
+    case 'pregnancy': return <PregnancyPanel />;
+    case 'birth': return <BirthPanel />;
+    case 'sperm': return <SpermPanel />;
+    case 'contraception': return <ContraceptionPanel />;
+    case 'disorders': return <DisordersPanel />;
+    default: return <DetailPanel />;
+  }
+}
+
+function Lab() {
+  const { def, state, dispatch, switchBody } = useLab();
+  const [about, setAbout] = useState(false);
+  // Phones: the structure panel opens over the model from the dock.
+  const [structuresOpen, setStructuresOpen] = useState(false);
+  const closeAbout = useCallback(() => setAbout(false), []);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const typing = e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement;
+      if (typing || about) return;
+      if (e.key === 'Escape') dispatch({ type: 'select', id: null });
+      if (e.key === '0' || e.key === 'Home') dispatch({ type: 'camera', preset: def.defaultCamera });
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [def, dispatch, about]);
+
+  // Picking a structure from the panel on a phone closes the panel so the details can show.
+  useEffect(() => { if (state.selected) setStructuresOpen(false); }, [state.selected]);
+
+  // A tour step for the other body moves the lab there.
+  const step = currentStep(def, state);
+  useEffect(() => {
+    if (step && step.body !== def.body) switchBody(step.body, { mode: 'tour', tourIndex: state.tourIndex, labels: state.labels });
+  }, [step, def.body, switchBody, state.tourIndex, state.labels]);
+
+  const pickMode = (m: Mode) => {
+    const owner = MODE_BODY[m];
+    if (owner && owner !== def.body) switchBody(owner, { mode: m, labels: state.labels });
+    else dispatch({ type: 'set-mode', mode: m });
+  };
+
+  const hasSheet = state.mode !== 'explore' || state.selected !== null || state.closeUp !== null;
+  const win = useWindowSize();
+  const insets = useMemo(() => panelInsets(win.w, win.h, hasSheet), [win.w, win.h, hasSheet]);
+  const meshCount = def.structures.filter((s) => s.kind === 'mesh').length;
+
+  return (
+    <div className="app" data-mode={state.mode} data-body={def.body}>
+      <main className="stage">
+        <LabViewer insets={insets} />
+      </main>
+
+      <header className="identity">
+        <p className="eyebrow"><span className="status-dot" aria-hidden="true" /> Interactive anatomy</p>
+        <h1>Reproductive System</h1>
+        <div className="seg-toggle body-switch" role="radiogroup" aria-label="Body">
+          {(['female', 'male'] as const).map((b) => (
+            <button key={b} type="button" role="radio" aria-checked={def.body === b} onClick={() => b !== def.body && switchBody(b, { mode: BODY_MODES[b].includes(state.mode) && state.mode !== 'tour' ? state.mode : 'explore', labels: state.labels, colourBy: state.colourBy })}>
+              {b === 'female' ? 'Female' : 'Male'}
+            </button>
+          ))}
+        </div>
+        <p className="identity-meta">{meshCount} structures · {def.body === 'female' ? 'HuBMAP · BodyParts3D' : 'BodyParts3D'}</p>
+      </header>
+
+      <nav className="top-actions" aria-label="Mode">
+        <div className="modes glass">
+          {MODES.map((m) => {
+            const owner = MODE_BODY[m.id];
+            return (
+              <button key={m.id} type="button" aria-pressed={state.mode === m.id} title={owner && owner !== def.body ? `Switches to the ${owner} body` : undefined} onClick={() => pickMode(m.id)}>
+                {m.label}
+              </button>
+            );
+          })}
+        </div>
+        <button type="button" className="icon-button glass" aria-label="About this lab, sources and credits" onClick={() => setAbout(true)}><span aria-hidden="true">i</span></button>
+      </nav>
+
+      <aside className={`left glass ${structuresOpen ? 'mobile-open' : ''}`}>
+        <StructurePanel />
+      </aside>
+
+      {hasSheet && (
+        <aside className="right glass" aria-label="Details">
+          <SidePanel />
+        </aside>
+      )}
+
+      <Toolbar structuresOpen={structuresOpen} onStructures={() => setStructuresOpen((v) => !v)} />
+
+      <footer className="studio-footer">
+        <span className="hint">Drag to rotate · Scroll to zoom · Click to inspect</span>
+        <button type="button" className="link" onClick={() => setAbout(true)}>Source &amp; credits</button>
+      </footer>
+
+      {about && <AboutSheet onClose={closeAbout} />}
+    </div>
+  );
+}
+
+/** The body in the address (?body=male), so a link can open either. */
+const initialBody = (): Body => (new URLSearchParams(window.location.search).get('body') === 'male' ? 'male' : 'female');
+
+export default function App() {
+  const [lab, setLab] = useState<{ body: Body; init: LabInit; key: number }>(() => ({ body: initialBody(), init: {}, key: 0 }));
+  const switchBody = useCallback((body: Body, init: LabInit = {}) => setLab((l) => ({ body, init, key: l.key + 1 })), []);
+  const results = useMemo(() => ({ female: validateDefinition(DEFINITIONS.female), male: validateDefinition(DEFINITIONS.male) }), []);
+  const result = results[lab.body];
+  if (!result.ok) {
+    // A broken definition must be visible, not silently half-rendered.
+    return (
+      <div className="fatal" role="alert">
+        <h1>This simulation definition is invalid</h1>
+        <ul>{result.issues.map((i) => <li key={`${i.path}-${i.code}`}><code>{i.path}</code>: {i.message}</li>)}</ul>
+      </div>
+    );
+  }
+  return (
+    <LabProvider key={lab.key} def={result.definition} init={lab.init} switchBody={switchBody}>
+      <Lab />
+    </LabProvider>
+  );
+}

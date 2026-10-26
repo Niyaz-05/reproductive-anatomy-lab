@@ -1,0 +1,113 @@
+{
+  "$comment": "Shading bake for the real-tissue look (tools/bake-shading.mjs), one entry per body. occluders: which layers can shade each layer, so hiding a layer never leaves dark shadows behind (each organ layer shades itself; vessels shade vessels; bones shade only bone).",
+  "provenance": "src/repro/generated/provenance.json",
+  "aoDistance": 0.01,
+  "rays": 48,
+  "rayOffset": 0.00025,
+  "noiseFrequency": 260,
+  "models": [
+    {
+      "body": "female",
+      "model": "public/models/female.glb",
+      "occluders": {
+        "uterus": [
+          "uterus"
+        ],
+        "myometrium": [
+          "myometrium"
+        ],
+        "tubes": [
+          "tubes"
+        ],
+        "ovaries": [
+          "ovaries"
+        ],
+        "ligaments": [
+          "ligaments"
+        ],
+        "vagina": [
+          "vagina"
+        ],
+        "vulva": [
+          "vulva"
+        ],
+        "breasts": [
+          "breasts"
+        ],
+        "breast-fat": [
+          "breast-fat"
+        ],
+        "pregnancy": [
+          "pregnancy"
+        ],
+        "urinary": [
+          "urinary"
+        ],
+        "gut": [
+          "gut"
+        ],
+        "neighbours": [
+          "neighbours"
+        ],
+        "pelvic-floor": [
+          "pelvic-floor"
+        ],
+        "bone": [
+          "bone"
+        ],
+        "skeleton": [
+          "skeleton"
+        ],
+        "artery": [
+          "artery",
+          "vein"
+        ],
+        "vein": [
+          "vein",
+          "artery"
+        ]
+      }
+    },
+    {
+      "body": "male",
+      "model": "public/models/male.glb",
+      "occluders": {
+        "testes": [
+          "testes"
+        ],
+        "scrotum": [
+          "scrotum"
+        ],
+        "ducts": [
+          "ducts"
+        ],
+        "glands": [
+          "glands"
+        ],
+        "penis": [
+          "penis"
+        ],
+        "urinary": [
+          "urinary"
+        ],
+        "gut": [
+          "gut"
+        ],
+        "pelvic-floor": [
+          "pelvic-floor"
+        ],
+        "bone": [
+          "bone"
+        ],
+        "artery": [
+          "artery",
+          "vein"
+        ],
+        "vein": [
+          "vein",
+          "artery"
+        ]
+      }
+    }
+  ]
+}

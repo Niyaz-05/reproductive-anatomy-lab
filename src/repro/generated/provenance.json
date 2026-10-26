@@ -1,0 +1,2184 @@
+{
+ "outputs": {
+  "female": {
+   "file": "public/models/female.glb",
+   "bytes": 6058044,
+   "sha256": "38c00ebb314061643c8dd19a6a923c9ba1eb25aacd98359c766640ed050c9937",
+   "triangles": 288828,
+   "sourceTriangles": 480074,
+   "maxErrorPct": 0.993274
+  },
+  "male": {
+   "file": "public/models/male.glb",
+   "bytes": 2376876,
+   "sha256": "a41c18f4d3274b284fd929c10c5795e4aeb80ec8a7c2b585dd05d4bec9b72eb0",
+   "triangles": 116078,
+   "sourceTriangles": 70594,
+   "maxErrorPct": 0.708699
+  }
+ },
+ "sources": {
+  "united": {
+   "name": "3D Reference Organ Set for Female v1.5 (HuBMAP HRA united female), as converted by Female Atlas",
+   "creators": "Kristen Browne, Heidi Schlehlein",
+   "doi": "https://doi.org/10.48539/HBM352.BTSQ.586",
+   "license": "CC-BY-4.0",
+   "intermediate": "github.com/Niyaz-05/female-atlas, commit 4c2dfcca02739b59827601915128ee64abdff2ea",
+   "atlasJsonSha256": "5fec63b2ebcb76ecd9c33027ed725e8ec0a7a76b756f72681285410072ae5c51",
+   "chunkSha256": {
+    "female-7.bin": "8ce85965a15c7574df239d48f23c10a33a8e1a8b208eec3d8ea08cfdebbfc889",
+    "female-8.bin": "059405eeb4951a5a64f4593da3c6a460b7adf8c45dc207341bf5eb496668bafc",
+    "female-5.bin": "ee9b75cb2f9bddacc581ae7a57dd2fce8500aceab5b91916a826c6ba7aec5e81",
+    "female-4.bin": "5f2906d7ebff3d3b0cb6ba57977cdc9704b9ea96c9aa7fcf56bef35f48213ae6",
+    "female-0.bin": "0e3e168b87d84c2c8da63991d86f6e559e30b2729106248e8361e134df35e266",
+    "female-6.bin": "e9d9b27b52799f9ce155f666a93f2150c6822e9dc6669ab87f4d3a2df1eae9f0"
+   },
+   "transformReversed": "y - 0.794760942 m"
+  },
+  "bodyparts3d": {
+   "name": "BodyParts3D 4.0 (Database Center for Life Science), via the Human Atlas build",
+   "license": "CC-BY-4.0",
+   "intermediate": "github.com/Niyaz-05/human-atlas, commit 76f069640f2c3dd40a58d1556896ac25008f592e",
+   "atlasJsonSha256": "c359f4bcd2cba90b7411d66d5e9fc04dc81294d46cd5c1e8b212c824f2e5bbee",
+   "chunkSha256": {
+    "body-12.bin": "61a6c8da89bb20df50c575964ac81aa4090eabfc2cb27ad2155aea325f31c6c0",
+    "body-11.bin": "e8c1afe7f30fe710ad164ec9cd2287a32881606e7eb590af47d76b3f84405027",
+    "body-13.bin": "4c51b6be85d5b705d2b52b79b9ad1cdae0b65ad03c9402a2f2673c7633fd94f3",
+    "body-9.bin": "0aa8aa09a379a2d759872659a2ef68fc4510ee37e435c4ebc63ee679722a4547",
+    "body-14.bin": "58604526a0cd9e7dca4d8587cd9a42f9dd03ec6c4ebbc22a9bf017b31246f7e7",
+    "body-1.bin": "aa077a4675f0d0dd3c9b0af39dc8cf6bcb348c3bf7d283478d4206ce30a5a0de",
+    "body-7.bin": "06340f48478eb989cec117a558290c0cd54eeead9641b565cbb8aab255b4e56b",
+    "body-8.bin": "18beacfdeadc8ad483d692672aae165f4323704cd7a9bfcbebbd703f5e268e25"
+   },
+   "parts": {
+    "female": {
+     "levator-ani-left": [
+      "FJ2544 Left iliococcygeus",
+      "FJ2545 Left pubococcygeus",
+      "FJ2546 Left puborectalis"
+     ],
+     "levator-ani-right": [
+      "FJ2549 Right iliococcygeus",
+      "FJ2550 Right pubococcygeus",
+      "FJ2551 Right puborectalis"
+     ],
+     "coccygeus-left": [
+      "FJ2542 Left coccygeus"
+     ],
+     "coccygeus-right": [
+      "FJ2547 Right coccygeus"
+     ],
+     "external-anal-sphincter": [
+      "FJ2543 External anal sphincter",
+      "FJ2548 External anal sphincter"
+     ],
+     "common-iliac-artery-left": [
+      "FJ3464 Left common iliac artery"
+     ],
+     "common-iliac-artery-right": [
+      "FJ3565 Right common iliac artery"
+     ],
+     "internal-iliac-artery-left": [
+      "FJ3468 Left internal iliac artery"
+     ],
+     "internal-iliac-artery-right": [
+      "FJ3569 Right internal iliac artery"
+     ],
+     "external-iliac-artery-left": [
+      "FJ3466 Left external iliac artery"
+     ],
+     "external-iliac-artery-right": [
+      "FJ3567 Right external iliac artery"
+     ],
+     "ribs-left": [
+      "FJ3228 Left first rib",
+      "FJ3229 Left second rib",
+      "FJ3230 Left third rib",
+      "FJ3231 Left fourth rib",
+      "FJ3232 Left fifth rib",
+      "FJ3233 Left sixth rib",
+      "FJ3234 Left seventh rib",
+      "FJ3235 Left eighth rib",
+      "FJ3236 Left ninth rib",
+      "FJ3225 Left tenth rib",
+      "FJ3226 Left eleventh rib",
+      "FJ3227 Left twelfth rib"
+     ],
+     "ribs-right": [
+      "FJ3334 Right first rib",
+      "FJ3336 Right second rib",
+      "FJ3338 Right third rib",
+      "FJ3340 Right fourth rib",
+      "FJ3342 Right fifth rib",
+      "FJ3344 Right sixth rib",
+      "FJ3346 Right seventh rib",
+      "FJ3347 Right eighth rib",
+      "FJ3348 Right ninth rib",
+      "FJ3330 Right tenth rib",
+      "FJ3331 Right eleventh rib",
+      "FJ3332 Right twelfth rib"
+     ],
+     "sternum": [
+      "FJ3290 Manubrium",
+      "FJ3178 Body of sternum",
+      "FJ3153 Xiphoid process"
+     ]
+    },
+    "male": {
+     "testis-left": [
+      "FJ3138 Left testis"
+     ],
+     "testis-right": [
+      "FJ3142 Right testis"
+     ],
+     "epididymis-left": [
+      "FJ3136 Left epididymis"
+     ],
+     "epididymis-right": [
+      "FJ3141 Right epididymis"
+     ],
+     "deferent-duct-left": [
+      "FJ3135 Left deferent duct"
+     ],
+     "deferent-duct-right": [
+      "FJ3140 Right deferent duct"
+     ],
+     "prostate": [
+      "FJ3139 Prostate"
+     ],
+     "seminal-vesicle-left": [
+      "FJ3137 Left seminal vesicle"
+     ],
+     "seminal-vesicle-right": [
+      "FJ3143 Right seminal vesicle"
+     ],
+     "corpus-spongiosum": [
+      "FJ3133 Corpus spongiosum of penis"
+     ],
+     "glans-penis": [
+      "FJ3134 Glans penis"
+     ],
+     "urinary-bladder": [
+      "FJ3149 Urinary bladder"
+     ],
+     "ureter-left": [
+      "FJ3144 Left ureter"
+     ],
+     "ureter-right": [
+      "FJ3146 Right ureter"
+     ],
+     "rectum": [
+      "FJ2571 Rectum"
+     ],
+     "levator-ani-left": [
+      "FJ2544 Left iliococcygeus",
+      "FJ2545 Left pubococcygeus",
+      "FJ2546 Left puborectalis"
+     ],
+     "levator-ani-right": [
+      "FJ2549 Right iliococcygeus",
+      "FJ2550 Right pubococcygeus",
+      "FJ2551 Right puborectalis"
+     ],
+     "coccygeus-left": [
+      "FJ2542 Left coccygeus"
+     ],
+     "coccygeus-right": [
+      "FJ2547 Right coccygeus"
+     ],
+     "external-anal-sphincter": [
+      "FJ2543 External anal sphincter",
+      "FJ2548 External anal sphincter"
+     ],
+     "perineal-muscles": [
+      "FJ1450 superficial perineal muscle"
+     ],
+     "abdominal-aorta": [
+      "FJ1932 Abdominal aorta"
+     ],
+     "common-iliac-artery-left": [
+      "FJ3464 Left common iliac artery"
+     ],
+     "common-iliac-artery-right": [
+      "FJ3565 Right common iliac artery"
+     ],
+     "internal-iliac-artery-left": [
+      "FJ3468 Left internal iliac artery"
+     ],
+     "internal-iliac-artery-right": [
+      "FJ3569 Right internal iliac artery"
+     ],
+     "external-iliac-artery-left": [
+      "FJ3466 Left external iliac artery"
+     ],
+     "external-iliac-artery-right": [
+      "FJ3567 Right external iliac artery"
+     ],
+     "testicular-artery-left": [
+      "FJ3532 Left testicular artery"
+     ],
+     "testicular-artery-right": [
+      "FJ3617 Right testicular artery"
+     ],
+     "dorsal-artery-of-penis-left": [
+      "FJ3496 Left dorsal artery of penis",
+      "FJ3497 Left dorsal artery of penis"
+     ],
+     "dorsal-artery-of-penis-right": [
+      "FJ3592 Right dorsal artery of penis",
+      "FJ3593 Right dorsal artery of penis"
+     ],
+     "inferior-vena-cava": [
+      "FJ3659 Inferior vena cava"
+     ],
+     "left-renal-vein": [
+      "FJ3477 Left renal vein"
+     ],
+     "common-iliac-vein-left": [
+      "FJ3465 Left common iliac vein"
+     ],
+     "common-iliac-vein-right": [
+      "FJ3566 Right common iliac vein"
+     ],
+     "internal-iliac-vein-left": [
+      "FJ3469 Left internal iliac vein",
+      "FJ3470 Left internal iliac vein",
+      "FJ3471 Left internal iliac vein"
+     ],
+     "internal-iliac-vein-right": [
+      "FJ3570 Right internal iliac vein",
+      "FJ3571 Right internal iliac vein",
+      "FJ3572 Right internal iliac vein",
+      "FJ3607 Right internal iliac vein",
+      "FJ3608 Right internal iliac vein",
+      "FJ3609 Right internal iliac vein"
+     ],
+     "external-iliac-vein-left": [
+      "FJ3484 Left external iliac vein",
+      "FJ3522 Left external iliac vein",
+      "FJ3523 Left external iliac vein",
+      "FJ3524 Left external iliac vein"
+     ],
+     "external-iliac-vein-right": [
+      "FJ3568 Right external iliac vein"
+     ],
+     "testicular-vein-left": [
+      "FJ3533 Left testicular vein"
+     ],
+     "testicular-vein-right": [
+      "FJ3618 Right testicular vein"
+     ],
+     "deep-dorsal-vein-of-penis": [
+      "FJ2056 Deep dorsal vein of penis"
+     ],
+     "superficial-dorsal-veins": [
+      "FJ2208 Superficial dorsal vein of penis",
+      "FJ3426 Left superficial dorsal vein of penis",
+      "FJ3637 Right superficial dorsal vein of penis"
+     ],
+     "lumbar-spine": [
+      "FJ3157 First lumbar vertebra",
+      "FJ3159 Second lumbar vertebra",
+      "FJ3162 Third lumbar vertebra",
+      "FJ3165 Fourth lumbar vertebra",
+      "FJ3168 Fifth lumbar vertebra"
+     ],
+     "sacrum": [
+      "FJ3393 Sacrum"
+     ],
+     "hip-bone-left": [
+      "FJ3288 Left hip bone"
+     ],
+     "hip-bone-right": [
+      "FJ3152 Right hip bone"
+     ],
+     "corpus-cavernosum-left/right": [
+      "FJ3132 Corpus cavernosum of penis"
+     ]
+    }
+   },
+   "registration": {
+    "method": "similarity (rotation, uniform scale, shift): Horn's quaternion method on landmark centroids; the pelvis fit refined by ICP of the BodyParts3D hip bones and sacrum onto the HRA ones, then a smooth Gaussian warp of the residual bone-surface displacements",
+    "fits": {
+     "pelvis": {
+      "usedFor": [
+       "levator-ani-left",
+       "levator-ani-right",
+       "coccygeus-left",
+       "coccygeus-right",
+       "external-anal-sphincter",
+       "common-iliac-artery-left",
+       "common-iliac-artery-right",
+       "internal-iliac-artery-left",
+       "internal-iliac-artery-right",
+       "external-iliac-artery-left",
+       "external-iliac-artery-right"
+      ],
+      "scale": 1.13823,
+      "rotationDeg": 1.970734,
+      "rmsResidualMm": 15.434701,
+      "rigidSurfaceRmsMm": 14.455424,
+      "surfaceRmsMm": 4.168524,
+      "warpSamples": 1199,
+      "residuals": [
+       {
+        "landmark": "FJ3288 Left hip bone",
+        "mm": 19.674985
+       },
+       {
+        "landmark": "FJ3152 Right hip bone",
+        "mm": 17.949937
+       },
+       {
+        "landmark": "FJ3393 Sacrum",
+        "mm": 13.194354
+       },
+       {
+        "landmark": "FJ3168 Fifth lumbar vertebra",
+        "mm": 8.338088
+       }
+      ]
+     },
+     "thorax": {
+      "usedFor": [
+       "ribs-left",
+       "ribs-right",
+       "sternum"
+      ],
+      "scale": 0.861461,
+      "rotationDeg": 6.083165,
+      "rmsResidualMm": 4.571758,
+      "rigidSurfaceRmsMm": null,
+      "surfaceRmsMm": null,
+      "warpSamples": null,
+      "residuals": [
+       {
+        "landmark": "FJ3158 First thoracic vertebra",
+        "mm": 7.057217
+       },
+       {
+        "landmark": "FJ3160 Second thoracic vertebra",
+        "mm": 5.006396
+       },
+       {
+        "landmark": "FJ3163 Third thoracic vertebra",
+        "mm": 2.582877
+       },
+       {
+        "landmark": "FJ3166 Fourth thoracic vertebra",
+        "mm": 4.584863
+       },
+       {
+        "landmark": "FJ3169 Fifth thoracic vertebra",
+        "mm": 3.438429
+       },
+       {
+        "landmark": "FJ3171 Sixth thoracic vertebra",
+        "mm": 5.068243
+       },
+       {
+        "landmark": "FJ3173 Seventh thoracic vertebra",
+        "mm": 5.226871
+       },
+       {
+        "landmark": "FJ3174 Eighth thoracic vertebra",
+        "mm": 3.631553
+       },
+       {
+        "landmark": "FJ3175 Ninth thoracic vertebra",
+        "mm": 2.704672
+       },
+       {
+        "landmark": "FJ3154 Tenth thoracic vertebra",
+        "mm": 2.931308
+       },
+       {
+        "landmark": "FJ3155 Eleventh thoracic vertebra",
+        "mm": 1.952876
+       },
+       {
+        "landmark": "FJ3156 Twelfth thoracic vertebra",
+        "mm": 7.107136
+       }
+      ]
+     }
+    }
+   },
+   "verticesInsideTargetsPct": {
+    "before": {
+     "levator-ani-left": 0,
+     "levator-ani-right": 1.105528,
+     "external-anal-sphincter": 0
+    },
+    "after": {
+     "levator-ani-left": 0,
+     "levator-ani-right": 0,
+     "external-anal-sphincter": 0
+    }
+   }
+  },
+  "modelled": {
+   "vulva": "Modelled to textbook sizes on the HRA vaginal opening and pubic arch: clitoris (glans, body and crura along the ischiopubic rami), vestibular bulbs, greater vestibular glands, labia minora and majora.",
+   "ovarian-vessels": "Modelled: neither body has the ovarian artery and vein; they run from the aorta (the left vein to the left renal vein, the right to the vena cava) down the back wall and through the suspensory ligament to the ovary.",
+   "urethra": "Tubes on the path of the BodyParts3D urethra (too coarse to split), divided where it runs inside the prostate and the corpus spongiosum; widths after Gray’s Anatomy (prostatic about 6 mm, membranous 4 mm, spongy 5–6 mm with the navicular fossa).",
+   "ejaculatory-duct": "Modelled tubes about 2 cm long from the end of each deferent duct, where the seminal vesicle duct joins it, through the prostate to the seminal colliculus.",
+   "cavernosum": "The BodyParts3D corpora cavernosa (one mesh) cut into left and right at the midline septum; each deep (cavernosal) artery modelled along the middle of its corpus.",
+   "endometrium": "Modelled lens in the plane where the HRA uterine walls meet: an inverted triangle about 3 cm wide at the fundus, from the internal os to about 9 mm below the fundus; thickness from about 1 mm (menses) to 14 mm (late luteal phase) as a morph target.",
+   "gravid-uterus": "The HRA uterus wrapped by rays from its centre (an icosphere), with a morph target to a term uterus about 33 × 25 × 22 cm from the internal os to just below the xiphoid. The HRA full-term placenta set is placed on its inner posterior wall."
+  }
+ },
+ "changesHere": "Selected and merged the source meshes in src/repro/source/structures.source.json; welded coincident vertices; simplified the large meshes with meshoptimizer within the relative error bounds given there; subdivided and smoothed the small parts; recomputed smooth normals; placed the BodyParts3D pelvic floor, iliac arteries, ribs and sternum on the HRA body and pushed the pelvic floor out of the HRA organs; moved the HRA placenta set into the term uterus; generated the modelled parts; traced the routes; translated each body so the middle of its pelvic organs is the origin.",
+ "centreOffsetMetres": {
+  "female": [
+   0,
+   0.010418,
+   -0.055269
+  ],
+  "male": [
+   0,
+   0.837982,
+   0.01002
+  ]
+ },
+ "measures": {
+  "female": {
+   "uterus": {
+    "sizeMm": [
+     42.483003,
+     36.374394,
+     23.210743
+    ],
+    "volumeMl": 15.200256,
+    "cavityLengthMm": 35.212035,
+    "cavityWidthMm": 32
+   },
+   "cervix": {
+    "lengthMm": 15.342066,
+    "sizeMm": [
+     26.706717,
+     26.632409,
+     22.732893
+    ]
+   },
+   "tubes": {
+    "left": {
+     "routeToAmpullaMm": 127.845674,
+     "isthmusMm": 10.087763,
+     "ampullaMm": 48.967002
+    },
+    "right": {
+     "routeToAmpullaMm": 125.200939,
+     "isthmusMm": 9.412248,
+     "ampullaMm": 49.648156
+    }
+   },
+   "ovary": {
+    "left": {
+     "sizeMm": [
+      25.451574,
+      9.724784,
+      7.785344
+     ],
+     "ellipsoidMl": 1.008953,
+     "sampledMl": 1.002496
+    },
+    "right": {
+     "sizeMm": [
+      25.458139,
+      9.603322,
+      7.861067
+     ],
+     "ellipsoidMl": 1.006302,
+     "sampledMl": 1.018496
+    }
+   },
+   "vagina": {
+    "lengthMm": 72.127293,
+    "sizeMm": [
+     60.487761,
+     44.540441,
+     19.000373
+    ]
+   },
+   "pelvicInlet": {
+    "obstetricConjugateMm": 147.537409
+   },
+   "birthRouteMm": 217.803407,
+   "termUterus": {
+    "lengthMm": 344.559762,
+    "widthMm": 250,
+    "depthMm": 220,
+    "fundusAboveSymphysisMm": 330
+   },
+   "placenta": {
+    "diameterMm": 197.036148
+   },
+   "urethraMm": 23.547866,
+   "breast": {
+    "lobesSizeMm": [
+     112.087903,
+     71.929717,
+     46.397025
+    ]
+   },
+   "levels": {
+    "umbilicusY": 0.214433,
+    "symphysisTopY": -0.006328,
+    "xiphoidY": 0.392242
+   }
+  },
+  "male": {
+   "testis": {
+    "left": {
+     "sizeMm": [
+      28.985514,
+      21.989851,
+      19.892553
+     ],
+     "lambertMl": 9.002273,
+     "sampledMl": 6.748875
+    },
+    "right": {
+     "sizeMm": [
+      28.643778,
+      22.016327,
+      20.137529
+     ],
+     "lambertMl": 9.016535,
+     "sampledMl": 6.799375
+    }
+   },
+   "prostate": {
+    "sizeMm": [
+     34.244093,
+     32.206258,
+     19.898881
+    ],
+    "volumeMl": 11.596176
+   },
+   "seminalVesicle": {
+    "left": [
+     42.410307,
+     16.369467,
+     11.621735
+    ],
+    "right": [
+     42.319088,
+     16.795817,
+     11.112742
+    ]
+   },
+   "urethraMm": {
+    "prostatic": 17.997848,
+    "membranous": 21,
+    "spongy": 99.86379
+   },
+   "spermRouteMm": {
+    "left": 572.83591,
+    "right": 533.062486
+   },
+   "deferentDuctMm": {
+    "left": 390.149895,
+    "right": 347.213395
+   },
+   "penis": {
+    "corporaMm": [
+     139.675542,
+     67.599736,
+     62.82903
+    ]
+   },
+   "scrotumMm": [
+    78.192741,
+    57.238972,
+    40.378671
+   ]
+  }
+ },
+ "checks": {
+  "female": {
+   "cervixBetweenBladderAndRectum": true,
+   "uterusAboveVagina": true,
+   "ovariesBesideUterus": true,
+   "fimbriaeNearOvaries": true,
+   "breastsInFrontOfSpine": true,
+   "vulvaBelowSymphysis": true,
+   "vulvaSidesAboutTheOpening": true,
+   "pelvicFloorBelowUterus": true,
+   "termFundusBelowXiphoid": true,
+   "endometriumInsideUterus": true,
+   "routesContinuous": true
+  },
+  "male": {
+   "prostateBelowBladder": true,
+   "seminalVesiclesBehindBladder": true,
+   "testesBelowSymphysis": true,
+   "testesInScrotum": true,
+   "ductsReachVesicles": true,
+   "urethraThroughProstate": true,
+   "routesContinuous": true
+  }
+ },
+ "structures": [
+  {
+   "id": "uterine-fundus",
+   "body": "female",
+   "united": [
+    "VH_F_fundus_of_uterus"
+   ]
+  },
+  {
+   "id": "uterine-body",
+   "body": "female",
+   "united": [
+    "VH_F_body_of_uterus"
+   ]
+  },
+  {
+   "id": "uterine-cornua",
+   "body": "female",
+   "united": [
+    "VH_F_cornua"
+   ]
+  },
+  {
+   "id": "lower-uterine-segment",
+   "body": "female",
+   "united": [
+    "VH_F_lower_uterine_segment"
+   ]
+  },
+  {
+   "id": "cervix",
+   "body": "female",
+   "united": [
+    "VH_F_cervix"
+   ]
+  },
+  {
+   "id": "internal-os",
+   "body": "female",
+   "united": [
+    "VH_F_internal_cervical_os"
+   ]
+  },
+  {
+   "id": "external-os",
+   "body": "female",
+   "united": [
+    "VH_F_external_cervical_os"
+   ]
+  },
+  {
+   "id": "uterine-wall-anterior",
+   "body": "female",
+   "united": [
+    "VH_F_anterior_wall_of_uterus"
+   ]
+  },
+  {
+   "id": "uterine-wall-posterior",
+   "body": "female",
+   "united": [
+    "VH_F_posterior_wall_of_uterus"
+   ]
+  },
+  {
+   "id": "endometrium",
+   "body": "female",
+   "generated": "endometrium"
+  },
+  {
+   "id": "tube-isthmus-left",
+   "body": "female",
+   "united": [
+    "VH_F_isthmus_of_fallopian_tube_L"
+   ]
+  },
+  {
+   "id": "tube-ampulla-left",
+   "body": "female",
+   "united": [
+    "VH_F_ampulla_of_uterine_tube_L"
+   ]
+  },
+  {
+   "id": "tube-infundibulum-left",
+   "body": "female",
+   "united": [
+    "VH_F_uterine_tube_infundibulum_L"
+   ]
+  },
+  {
+   "id": "tube-fimbriae-left",
+   "body": "female",
+   "united": [
+    "VH_F_fibria_of_uterine_tube_L"
+   ]
+  },
+  {
+   "id": "tube-isthmus-right",
+   "body": "female",
+   "united": [
+    "VH_F_isthmus_of_fallopian_tube_R"
+   ]
+  },
+  {
+   "id": "tube-ampulla-right",
+   "body": "female",
+   "united": [
+    "VH_F_ampulla_of_uterine_tube_R"
+   ]
+  },
+  {
+   "id": "tube-infundibulum-right",
+   "body": "female",
+   "united": [
+    "VH_F_uterine_tube_infundibulum_R"
+   ]
+  },
+  {
+   "id": "tube-fimbriae-right",
+   "body": "female",
+   "united": [
+    "VH_F_fibria_of_uterine_tube_R"
+   ]
+  },
+  {
+   "id": "tubal-ostia",
+   "body": "female",
+   "united": [
+    "VH_F_abdominal_ostium_of_uterine_tube"
+   ]
+  },
+  {
+   "id": "ovary-left",
+   "body": "female",
+   "united": [
+    "VH_F_left_ovary"
+   ]
+  },
+  {
+   "id": "ovary-right",
+   "body": "female",
+   "united": [
+    "VH_F_right_ovary"
+   ]
+  },
+  {
+   "id": "broad-ligament",
+   "body": "female",
+   "united": [
+    "VH_F_broad_ligament"
+   ]
+  },
+  {
+   "id": "mesosalpinx-left",
+   "body": "female",
+   "united": [
+    "VH_F_mesosalpinx_L"
+   ]
+  },
+  {
+   "id": "mesovarium-left",
+   "body": "female",
+   "united": [
+    "VH_F_mesovarium_L"
+   ]
+  },
+  {
+   "id": "round-ligament-left",
+   "body": "female",
+   "united": [
+    "VH_F_right_round_ligament_of_uterus"
+   ]
+  },
+  {
+   "id": "ovarian-ligament-left",
+   "body": "female",
+   "united": [
+    "VH_F_ovarian_ligament_L"
+   ]
+  },
+  {
+   "id": "suspensory-ligament-left",
+   "body": "female",
+   "united": [
+    "VH_F_suspensory_ligament_of_ovary_L"
+   ]
+  },
+  {
+   "id": "cardinal-ligament-left",
+   "body": "female",
+   "united": [
+    "VH_F_left_cardinal_ligament_of_uterus"
+   ]
+  },
+  {
+   "id": "uterosacral-ligament-left",
+   "body": "female",
+   "united": [
+    "VH_F_left_uterosacral_ligament"
+   ]
+  },
+  {
+   "id": "mesosalpinx-right",
+   "body": "female",
+   "united": [
+    "VH_F_mesosalpinx_R"
+   ]
+  },
+  {
+   "id": "mesovarium-right",
+   "body": "female",
+   "united": [
+    "VH_F_mesovarium_R"
+   ]
+  },
+  {
+   "id": "round-ligament-right",
+   "body": "female",
+   "united": [
+    "VH_F_left_round_ligament_of_uterus"
+   ]
+  },
+  {
+   "id": "ovarian-ligament-right",
+   "body": "female",
+   "united": [
+    "VH_F_ovarian_ligament_R"
+   ]
+  },
+  {
+   "id": "suspensory-ligament-right",
+   "body": "female",
+   "united": [
+    "VH_F_suspensory_ligament_of_ovary_R"
+   ]
+  },
+  {
+   "id": "cardinal-ligament-right",
+   "body": "female",
+   "united": [
+    "VH_F_right_cardinal_ligament_of_uterus"
+   ]
+  },
+  {
+   "id": "uterosacral-ligament-right",
+   "body": "female",
+   "united": [
+    "VH_F_right_uterosacral_ligament"
+   ]
+  },
+  {
+   "id": "uterovesical-pouch",
+   "body": "female",
+   "united": [
+    "VH_F_uterovesical_pouch"
+   ]
+  },
+  {
+   "id": "vagina",
+   "body": "female",
+   "united": [
+    "VH_F_vagina"
+   ]
+  },
+  {
+   "id": "vaginal-fornix",
+   "body": "female",
+   "united": [
+    "VH_F_cervicovaginal_junction"
+   ]
+  },
+  {
+   "id": "labium-majus-left",
+   "body": "female",
+   "generated": "vulva"
+  },
+  {
+   "id": "labium-minus-left",
+   "body": "female",
+   "generated": "vulva"
+  },
+  {
+   "id": "clitoral-crus-left",
+   "body": "female",
+   "generated": "vulva"
+  },
+  {
+   "id": "vestibular-bulb-left",
+   "body": "female",
+   "generated": "vulva"
+  },
+  {
+   "id": "vestibular-gland-left",
+   "body": "female",
+   "generated": "vulva"
+  },
+  {
+   "id": "labium-majus-right",
+   "body": "female",
+   "generated": "vulva"
+  },
+  {
+   "id": "labium-minus-right",
+   "body": "female",
+   "generated": "vulva"
+  },
+  {
+   "id": "clitoral-crus-right",
+   "body": "female",
+   "generated": "vulva"
+  },
+  {
+   "id": "vestibular-bulb-right",
+   "body": "female",
+   "generated": "vulva"
+  },
+  {
+   "id": "vestibular-gland-right",
+   "body": "female",
+   "generated": "vulva"
+  },
+  {
+   "id": "clitoral-glans",
+   "body": "female",
+   "generated": "vulva"
+  },
+  {
+   "id": "clitoral-body",
+   "body": "female",
+   "generated": "vulva"
+  },
+  {
+   "id": "mammary-lobes-left",
+   "body": "female",
+   "united": [
+    "VH_F_mammary_lobes_L"
+   ]
+  },
+  {
+   "id": "lactiferous-ducts-left",
+   "body": "female",
+   "united": [
+    "VH_F_main_lactiferous_ducts_L"
+   ]
+  },
+  {
+   "id": "lactiferous-sinuses-left",
+   "body": "female",
+   "united": [
+    "VH_F_main_lactiferous_sinuses_L"
+   ]
+  },
+  {
+   "id": "nipple-left",
+   "body": "female",
+   "united": [
+    "VH_F_nipple_L"
+   ]
+  },
+  {
+   "id": "areola-left",
+   "body": "female",
+   "united": [
+    "VH_F_areola_L",
+    "VH_F_areolar_tubercles_L"
+   ]
+  },
+  {
+   "id": "breast-ligaments-left",
+   "body": "female",
+   "united": [
+    "VH_F_suspensory_ligaments_L"
+   ]
+  },
+  {
+   "id": "breast-fat-left",
+   "body": "female",
+   "united": [
+    "VH_F_fat_L"
+   ]
+  },
+  {
+   "id": "mammary-lobes-right",
+   "body": "female",
+   "united": [
+    "VH_F_mammary_lobes_R"
+   ]
+  },
+  {
+   "id": "lactiferous-ducts-right",
+   "body": "female",
+   "united": [
+    "VH_F_main_lactiferous_ducts_R"
+   ]
+  },
+  {
+   "id": "lactiferous-sinuses-right",
+   "body": "female",
+   "united": [
+    "VH_F_main_lactiferous_sinuses_R"
+   ]
+  },
+  {
+   "id": "nipple-right",
+   "body": "female",
+   "united": [
+    "VH_F_nipple_R"
+   ]
+  },
+  {
+   "id": "areola-right",
+   "body": "female",
+   "united": [
+    "VH_F_areola_R",
+    "VH_F_areolar_tubercles_R"
+   ]
+  },
+  {
+   "id": "breast-ligaments-right",
+   "body": "female",
+   "united": [
+    "VH_F_suspensory_ligaments_R"
+   ]
+  },
+  {
+   "id": "breast-fat-right",
+   "body": "female",
+   "united": [
+    "VH_F_fat_R"
+   ]
+  },
+  {
+   "id": "placenta-basal-plate",
+   "body": "female",
+   "united": [
+    "VH_F_basal_plate"
+   ]
+  },
+  {
+   "id": "placenta-chorionic-plate",
+   "body": "female",
+   "united": [
+    "VH_F_chorionic_plate"
+   ]
+  },
+  {
+   "id": "placental-vessels",
+   "body": "female",
+   "united": [
+    "VH_F_placenta_vessels"
+   ]
+  },
+  {
+   "id": "amnion",
+   "body": "female",
+   "united": [
+    "VH_F_amnion"
+   ]
+  },
+  {
+   "id": "umbilical-cord",
+   "body": "female",
+   "united": [
+    "VH_F_umbilical_cord"
+   ]
+  },
+  {
+   "id": "umbilical-arteries",
+   "body": "female",
+   "united": [
+    "VH_F_umbilical_artery_1",
+    "VH_F_umbilical_artery_2"
+   ]
+  },
+  {
+   "id": "umbilical-vein",
+   "body": "female",
+   "united": [
+    "VH_F_umbilical_vein"
+   ]
+  },
+  {
+   "id": "gravid-uterus",
+   "body": "female",
+   "generated": "gravid-uterus"
+  },
+  {
+   "id": "urinary-bladder",
+   "body": "female",
+   "united": [
+    "VH_F_fundus_of_urinary_bladder_dome",
+    "VH_F_fundus_of_urinary_bladder_base"
+   ]
+  },
+  {
+   "id": "bladder-neck",
+   "body": "female",
+   "united": [
+    "VH_F_urinary_bladder_neck_smooth_muscle"
+   ]
+  },
+  {
+   "id": "bladder-trigone",
+   "body": "female",
+   "united": [
+    "VH_F_trigone_of_urinary_bladder"
+   ]
+  },
+  {
+   "id": "ureter-left",
+   "body": "female",
+   "united": [
+    "VH_F_left_ureter"
+   ]
+  },
+  {
+   "id": "ureter-right",
+   "body": "female",
+   "united": [
+    "VH_F_right_ureter"
+   ]
+  },
+  {
+   "id": "urethra",
+   "body": "female",
+   "generated": "female-urethra"
+  },
+  {
+   "id": "rectum",
+   "body": "female",
+   "united": [
+    "VH_F_rectum"
+   ]
+  },
+  {
+   "id": "sigmoid-colon",
+   "body": "female",
+   "united": [
+    "VH_F_sigmoid_colon"
+   ]
+  },
+  {
+   "id": "small-intestine",
+   "body": "female",
+   "united": [
+    "VH_F_jejenum",
+    "VH_F_ileum",
+    "VH_F_ileum_terminal"
+   ]
+  },
+  {
+   "id": "large-intestine",
+   "body": "female",
+   "united": [
+    "VH_F_caecum",
+    "VH_F_ascending_colon",
+    "VH_F_descending_colon"
+   ]
+  },
+  {
+   "id": "kidney-left",
+   "body": "female",
+   "united": [
+    "VH_F_kidney_capsule_L"
+   ]
+  },
+  {
+   "id": "kidney-right",
+   "body": "female",
+   "united": [
+    "VH_F_kidney_capsule_R"
+   ]
+  },
+  {
+   "id": "levator-ani-left",
+   "body": "female",
+   "bp3d": [
+    "FJ2544",
+    "FJ2545",
+    "FJ2546"
+   ]
+  },
+  {
+   "id": "levator-ani-right",
+   "body": "female",
+   "bp3d": [
+    "FJ2549",
+    "FJ2550",
+    "FJ2551"
+   ]
+  },
+  {
+   "id": "coccygeus-left",
+   "body": "female",
+   "bp3d": [
+    "FJ2542"
+   ]
+  },
+  {
+   "id": "coccygeus-right",
+   "body": "female",
+   "bp3d": [
+    "FJ2547"
+   ]
+  },
+  {
+   "id": "external-anal-sphincter",
+   "body": "female",
+   "bp3d": [
+    "FJ2543",
+    "FJ2548"
+   ]
+  },
+  {
+   "id": "abdominal-aorta",
+   "body": "female",
+   "united": [
+    "VH_F_descending_aorta_b"
+   ]
+  },
+  {
+   "id": "renal-artery-left",
+   "body": "female",
+   "united": [
+    "VH_F_left_renal_artery"
+   ]
+  },
+  {
+   "id": "renal-artery-right",
+   "body": "female",
+   "united": [
+    "VH_F_right_renal_artery"
+   ]
+  },
+  {
+   "id": "common-iliac-artery-left",
+   "body": "female",
+   "bp3d": [
+    "FJ3464"
+   ]
+  },
+  {
+   "id": "common-iliac-artery-right",
+   "body": "female",
+   "bp3d": [
+    "FJ3565"
+   ]
+  },
+  {
+   "id": "internal-iliac-artery-left",
+   "body": "female",
+   "bp3d": [
+    "FJ3468"
+   ]
+  },
+  {
+   "id": "internal-iliac-artery-right",
+   "body": "female",
+   "bp3d": [
+    "FJ3569"
+   ]
+  },
+  {
+   "id": "external-iliac-artery-left",
+   "body": "female",
+   "bp3d": [
+    "FJ3466"
+   ]
+  },
+  {
+   "id": "external-iliac-artery-right",
+   "body": "female",
+   "bp3d": [
+    "FJ3567"
+   ]
+  },
+  {
+   "id": "uterine-artery-left",
+   "body": "female",
+   "united": [
+    "VH_F_left_uterine_artery"
+   ]
+  },
+  {
+   "id": "uterine-artery-right",
+   "body": "female",
+   "united": [
+    "VH_F_right_uterine_artery"
+   ]
+  },
+  {
+   "id": "ovarian-artery-left",
+   "body": "female",
+   "generated": "ovarian-vessel"
+  },
+  {
+   "id": "ovarian-artery-right",
+   "body": "female",
+   "generated": "ovarian-vessel"
+  },
+  {
+   "id": "inferior-vena-cava",
+   "body": "female",
+   "united": [
+    "VH_F_inferior_vena_cava_a",
+    "VH_F_inferior_vena_cava_b"
+   ]
+  },
+  {
+   "id": "renal-vein-left",
+   "body": "female",
+   "united": [
+    "VH_F_left_renal_vein"
+   ]
+  },
+  {
+   "id": "renal-vein-right",
+   "body": "female",
+   "united": [
+    "VH_F_right_renal_vein"
+   ]
+  },
+  {
+   "id": "common-iliac-vein-left",
+   "body": "female",
+   "united": [
+    "VH_F_left_common_iliac_vein"
+   ]
+  },
+  {
+   "id": "common-iliac-vein-right",
+   "body": "female",
+   "united": [
+    "VH_F_right_common_iliac_vein"
+   ]
+  },
+  {
+   "id": "internal-iliac-vein-left",
+   "body": "female",
+   "united": [
+    "VH_F_internal_iliac_vein_L"
+   ]
+  },
+  {
+   "id": "internal-iliac-vein-right",
+   "body": "female",
+   "united": [
+    "VH_F_internal_iliac_vein_R"
+   ]
+  },
+  {
+   "id": "uterine-vein-left",
+   "body": "female",
+   "united": [
+    "VH_F_left_uterine_vein"
+   ]
+  },
+  {
+   "id": "uterine-vein-right",
+   "body": "female",
+   "united": [
+    "VH_F_right_uterine_vein"
+   ]
+  },
+  {
+   "id": "ovarian-vein-left",
+   "body": "female",
+   "generated": "ovarian-vessel"
+  },
+  {
+   "id": "ovarian-vein-right",
+   "body": "female",
+   "generated": "ovarian-vessel"
+  },
+  {
+   "id": "thoracic-spine",
+   "body": "female",
+   "united": [
+    "VH_F_thoracic_vertebra_6",
+    "VH_F_thoracic_vertebra_7",
+    "VH_F_thoracic_vertebra_8",
+    "VH_F_thoracic_vertebra_9",
+    "VH_F_thoracic_vertebra_10",
+    "VH_F_thoracic_vertebra_11",
+    "VH_F_thoracic_vertebra_12"
+   ]
+  },
+  {
+   "id": "lumbar-spine",
+   "body": "female",
+   "united": [
+    "VH_F_lumbar_vertebra_1",
+    "VH_F_lumbar_vertebra_2",
+    "VH_F_lumbar_vertebra_3",
+    "VH_F_lumbar_vertebra_4",
+    "VH_F_lumbar_vertebra_5",
+    "VH_F_lumbar_vertebra_6"
+   ]
+  },
+  {
+   "id": "sacrum",
+   "body": "female",
+   "united": [
+    "VH_F_sacrum"
+   ]
+  },
+  {
+   "id": "coccyx",
+   "body": "female",
+   "united": [
+    "VH_F_coccyx"
+   ]
+  },
+  {
+   "id": "hip-bone-left",
+   "body": "female",
+   "united": [
+    "VH_F_ilium_compact_bone_L",
+    "VH_F_ischium_compact_bone_L",
+    "VH_F_pubis_compact_bone_L"
+   ]
+  },
+  {
+   "id": "hip-bone-right",
+   "body": "female",
+   "united": [
+    "VH_F_ilium_compact_bone_R",
+    "VH_F_ischium_compact_bone_R",
+    "VH_F_pubis_compact_bone_R"
+   ]
+  },
+  {
+   "id": "ribs-left",
+   "body": "female",
+   "bp3d": [
+    "FJ3228",
+    "FJ3229",
+    "FJ3230",
+    "FJ3231",
+    "FJ3232",
+    "FJ3233",
+    "FJ3234",
+    "FJ3235",
+    "FJ3236",
+    "FJ3225",
+    "FJ3226",
+    "FJ3227"
+   ]
+  },
+  {
+   "id": "ribs-right",
+   "body": "female",
+   "bp3d": [
+    "FJ3334",
+    "FJ3336",
+    "FJ3338",
+    "FJ3340",
+    "FJ3342",
+    "FJ3344",
+    "FJ3346",
+    "FJ3347",
+    "FJ3348",
+    "FJ3330",
+    "FJ3331",
+    "FJ3332"
+   ]
+  },
+  {
+   "id": "sternum",
+   "body": "female",
+   "bp3d": [
+    "FJ3290",
+    "FJ3178",
+    "FJ3153"
+   ]
+  },
+  {
+   "id": "testis-left",
+   "body": "male",
+   "bp3d": [
+    "FJ3138"
+   ]
+  },
+  {
+   "id": "testis-right",
+   "body": "male",
+   "bp3d": [
+    "FJ3142"
+   ]
+  },
+  {
+   "id": "epididymis-left",
+   "body": "male",
+   "bp3d": [
+    "FJ3136"
+   ]
+  },
+  {
+   "id": "epididymis-right",
+   "body": "male",
+   "bp3d": [
+    "FJ3141"
+   ]
+  },
+  {
+   "id": "scrotum",
+   "body": "male",
+   "generated": "scrotum"
+  },
+  {
+   "id": "deferent-duct-left",
+   "body": "male",
+   "bp3d": [
+    "FJ3135"
+   ]
+  },
+  {
+   "id": "deferent-duct-right",
+   "body": "male",
+   "bp3d": [
+    "FJ3140"
+   ]
+  },
+  {
+   "id": "ejaculatory-duct-left",
+   "body": "male",
+   "generated": "ejaculatory-duct"
+  },
+  {
+   "id": "ejaculatory-duct-right",
+   "body": "male",
+   "generated": "ejaculatory-duct"
+  },
+  {
+   "id": "prostatic-urethra",
+   "body": "male",
+   "generated": "urethra-part"
+  },
+  {
+   "id": "membranous-urethra",
+   "body": "male",
+   "generated": "urethra-part"
+  },
+  {
+   "id": "spongy-urethra",
+   "body": "male",
+   "generated": "urethra-part"
+  },
+  {
+   "id": "prostate",
+   "body": "male",
+   "bp3d": [
+    "FJ3139"
+   ]
+  },
+  {
+   "id": "seminal-vesicle-left",
+   "body": "male",
+   "bp3d": [
+    "FJ3137"
+   ]
+  },
+  {
+   "id": "seminal-vesicle-right",
+   "body": "male",
+   "bp3d": [
+    "FJ3143"
+   ]
+  },
+  {
+   "id": "bulbourethral-gland-left",
+   "body": "male",
+   "generated": "bulbourethral"
+  },
+  {
+   "id": "bulbourethral-gland-right",
+   "body": "male",
+   "generated": "bulbourethral"
+  },
+  {
+   "id": "corpus-cavernosum-left",
+   "body": "male",
+   "generated": "cavernosum"
+  },
+  {
+   "id": "corpus-cavernosum-right",
+   "body": "male",
+   "generated": "cavernosum"
+  },
+  {
+   "id": "corpus-spongiosum",
+   "body": "male",
+   "bp3d": [
+    "FJ3133"
+   ]
+  },
+  {
+   "id": "glans-penis",
+   "body": "male",
+   "bp3d": [
+    "FJ3134"
+   ]
+  },
+  {
+   "id": "urinary-bladder",
+   "body": "male",
+   "bp3d": [
+    "FJ3149"
+   ]
+  },
+  {
+   "id": "ureter-left",
+   "body": "male",
+   "bp3d": [
+    "FJ3144"
+   ]
+  },
+  {
+   "id": "ureter-right",
+   "body": "male",
+   "bp3d": [
+    "FJ3146"
+   ]
+  },
+  {
+   "id": "rectum",
+   "body": "male",
+   "bp3d": [
+    "FJ2571"
+   ]
+  },
+  {
+   "id": "levator-ani-left",
+   "body": "male",
+   "bp3d": [
+    "FJ2544",
+    "FJ2545",
+    "FJ2546"
+   ]
+  },
+  {
+   "id": "levator-ani-right",
+   "body": "male",
+   "bp3d": [
+    "FJ2549",
+    "FJ2550",
+    "FJ2551"
+   ]
+  },
+  {
+   "id": "coccygeus-left",
+   "body": "male",
+   "bp3d": [
+    "FJ2542"
+   ]
+  },
+  {
+   "id": "coccygeus-right",
+   "body": "male",
+   "bp3d": [
+    "FJ2547"
+   ]
+  },
+  {
+   "id": "external-anal-sphincter",
+   "body": "male",
+   "bp3d": [
+    "FJ2543",
+    "FJ2548"
+   ]
+  },
+  {
+   "id": "perineal-muscles",
+   "body": "male",
+   "bp3d": [
+    "FJ1450"
+   ]
+  },
+  {
+   "id": "abdominal-aorta",
+   "body": "male",
+   "bp3d": [
+    "FJ1932"
+   ]
+  },
+  {
+   "id": "common-iliac-artery-left",
+   "body": "male",
+   "bp3d": [
+    "FJ3464"
+   ]
+  },
+  {
+   "id": "common-iliac-artery-right",
+   "body": "male",
+   "bp3d": [
+    "FJ3565"
+   ]
+  },
+  {
+   "id": "internal-iliac-artery-left",
+   "body": "male",
+   "bp3d": [
+    "FJ3468"
+   ]
+  },
+  {
+   "id": "internal-iliac-artery-right",
+   "body": "male",
+   "bp3d": [
+    "FJ3569"
+   ]
+  },
+  {
+   "id": "external-iliac-artery-left",
+   "body": "male",
+   "bp3d": [
+    "FJ3466"
+   ]
+  },
+  {
+   "id": "external-iliac-artery-right",
+   "body": "male",
+   "bp3d": [
+    "FJ3567"
+   ]
+  },
+  {
+   "id": "testicular-artery-left",
+   "body": "male",
+   "bp3d": [
+    "FJ3532"
+   ]
+  },
+  {
+   "id": "testicular-artery-right",
+   "body": "male",
+   "bp3d": [
+    "FJ3617"
+   ]
+  },
+  {
+   "id": "dorsal-artery-of-penis-left",
+   "body": "male",
+   "bp3d": [
+    "name:Left dorsal artery of penis"
+   ]
+  },
+  {
+   "id": "dorsal-artery-of-penis-right",
+   "body": "male",
+   "bp3d": [
+    "FJ3592",
+    "FJ3593"
+   ]
+  },
+  {
+   "id": "deep-artery-of-penis-left",
+   "body": "male",
+   "generated": "deep-artery"
+  },
+  {
+   "id": "deep-artery-of-penis-right",
+   "body": "male",
+   "generated": "deep-artery"
+  },
+  {
+   "id": "inferior-vena-cava",
+   "body": "male",
+   "bp3d": [
+    "FJ3659"
+   ]
+  },
+  {
+   "id": "left-renal-vein",
+   "body": "male",
+   "bp3d": [
+    "FJ3477"
+   ]
+  },
+  {
+   "id": "common-iliac-vein-left",
+   "body": "male",
+   "bp3d": [
+    "FJ3465"
+   ]
+  },
+  {
+   "id": "common-iliac-vein-right",
+   "body": "male",
+   "bp3d": [
+    "name:Right common iliac vein"
+   ]
+  },
+  {
+   "id": "internal-iliac-vein-left",
+   "body": "male",
+   "bp3d": [
+    "FJ3469",
+    "FJ3470",
+    "FJ3471"
+   ]
+  },
+  {
+   "id": "internal-iliac-vein-right",
+   "body": "male",
+   "bp3d": [
+    "FJ3570",
+    "FJ3571",
+    "FJ3572",
+    "FJ3607",
+    "FJ3608",
+    "FJ3609"
+   ]
+  },
+  {
+   "id": "external-iliac-vein-left",
+   "body": "male",
+   "bp3d": [
+    "FJ3484",
+    "FJ3522",
+    "FJ3523",
+    "FJ3524"
+   ]
+  },
+  {
+   "id": "external-iliac-vein-right",
+   "body": "male",
+   "bp3d": [
+    "name:Right external iliac vein"
+   ]
+  },
+  {
+   "id": "testicular-vein-left",
+   "body": "male",
+   "bp3d": [
+    "name:Left testicular vein"
+   ]
+  },
+  {
+   "id": "testicular-vein-right",
+   "body": "male",
+   "bp3d": [
+    "FJ3618"
+   ]
+  },
+  {
+   "id": "deep-dorsal-vein-of-penis",
+   "body": "male",
+   "bp3d": [
+    "FJ2056"
+   ]
+  },
+  {
+   "id": "superficial-dorsal-veins",
+   "body": "male",
+   "bp3d": [
+    "FJ2208",
+    "FJ3426",
+    "FJ3637"
+   ]
+  },
+  {
+   "id": "lumbar-spine",
+   "body": "male",
+   "bp3d": [
+    "FJ3157",
+    "FJ3159",
+    "FJ3162",
+    "FJ3165",
+    "FJ3168"
+   ]
+  },
+  {
+   "id": "sacrum",
+   "body": "male",
+   "bp3d": [
+    "FJ3393"
+   ]
+  },
+  {
+   "id": "hip-bone-left",
+   "body": "male",
+   "bp3d": [
+    "FJ3288"
+   ]
+  },
+  {
+   "id": "hip-bone-right",
+   "body": "male",
+   "bp3d": [
+    "FJ3152"
+   ]
+  }
+ ],
+ "shadingBake": {
+  "tool": "tools/bake-shading.mjs",
+  "attribute": "_TISSUE (VEC4 unsigned byte, normalised): r ambient occlusion, g mottling noise, b fat proximity, a unused",
+  "settings": {
+   "aoDistance": 0.01,
+   "rays": 48,
+   "rayOffset": 0.00025,
+   "noiseFrequency": 260
+  },
+  "bodies": {
+   "female": {
+    "occluders": {
+     "uterus": [
+      "uterus"
+     ],
+     "myometrium": [
+      "myometrium"
+     ],
+     "tubes": [
+      "tubes"
+     ],
+     "ovaries": [
+      "ovaries"
+     ],
+     "ligaments": [
+      "ligaments"
+     ],
+     "vagina": [
+      "vagina"
+     ],
+     "vulva": [
+      "vulva"
+     ],
+     "breasts": [
+      "breasts"
+     ],
+     "breast-fat": [
+      "breast-fat"
+     ],
+     "pregnancy": [
+      "pregnancy"
+     ],
+     "urinary": [
+      "urinary"
+     ],
+     "gut": [
+      "gut"
+     ],
+     "neighbours": [
+      "neighbours"
+     ],
+     "pelvic-floor": [
+      "pelvic-floor"
+     ],
+     "bone": [
+      "bone"
+     ],
+     "skeleton": [
+      "skeleton"
+     ],
+     "artery": [
+      "artery",
+      "vein"
+     ],
+     "vein": [
+      "vein",
+      "artery"
+     ]
+    },
+    "unbakedSha256": "545de7735c794a1e1e8f0c97d2a88e9736cccf22e54bf03dd3ae2c503a5a2a50",
+    "bakedSha256": "38c00ebb314061643c8dd19a6a923c9ba1eb25aacd98359c766640ed050c9937",
+    "vertices": 149191,
+    "layers": {
+     "uterus": {
+      "meshes": 7,
+      "meanAO": 0.769,
+      "vertices": 3254
+     },
+     "myometrium": {
+      "meshes": 3,
+      "meanAO": 0.702,
+      "vertices": 3188
+     },
+     "tubes": {
+      "meshes": 9,
+      "meanAO": 0.658,
+      "vertices": 8614
+     },
+     "ovaries": {
+      "meshes": 2,
+      "meanAO": 1,
+      "vertices": 1448
+     },
+     "ligaments": {
+      "meshes": 16,
+      "meanAO": 0.818,
+      "vertices": 13408
+     },
+     "vagina": {
+      "meshes": 2,
+      "meanAO": 0.849,
+      "vertices": 1836
+     },
+     "breasts": {
+      "meshes": 12,
+      "meanAO": 0.776,
+      "vertices": 30963
+     },
+     "breast-fat": {
+      "meshes": 2,
+      "meanAO": 0.528,
+      "vertices": 6872
+     },
+     "pregnancy": {
+      "meshes": 8,
+      "meanAO": 0.689,
+      "vertices": 17564
+     },
+     "urinary": {
+      "meshes": 6,
+      "meanAO": 0.916,
+      "vertices": 7119
+     },
+     "gut": {
+      "meshes": 2,
+      "meanAO": 0.968,
+      "vertices": 2104
+     },
+     "neighbours": {
+      "meshes": 4,
+      "meanAO": 0.918,
+      "vertices": 4033
+     },
+     "pelvic-floor": {
+      "meshes": 5,
+      "meanAO": 0.696,
+      "vertices": 8434
+     },
+     "artery": {
+      "meshes": 13,
+      "meanAO": 0.727,
+      "vertices": 10022
+     },
+     "vein": {
+      "meshes": 11,
+      "meanAO": 0.776,
+      "vertices": 8576
+     },
+     "bone": {
+      "meshes": 6,
+      "meanAO": 0.907,
+      "vertices": 11458
+     },
+     "skeleton": {
+      "meshes": 3,
+      "meanAO": 0.974,
+      "vertices": 7044
+     },
+     "vulva": {
+      "meshes": 12,
+      "meanAO": 0.706,
+      "vertices": 3254
+     }
+    }
+   },
+   "male": {
+    "occluders": {
+     "testes": [
+      "testes"
+     ],
+     "scrotum": [
+      "scrotum"
+     ],
+     "ducts": [
+      "ducts"
+     ],
+     "glands": [
+      "glands"
+     ],
+     "penis": [
+      "penis"
+     ],
+     "urinary": [
+      "urinary"
+     ],
+     "gut": [
+      "gut"
+     ],
+     "pelvic-floor": [
+      "pelvic-floor"
+     ],
+     "bone": [
+      "bone"
+     ],
+     "artery": [
+      "artery",
+      "vein"
+     ],
+     "vein": [
+      "vein",
+      "artery"
+     ]
+    },
+    "unbakedSha256": "f7e1cc8e9876d0309c3bde36aa7703413405365937d30aefe892f5d85b23d985",
+    "bakedSha256": "a41c18f4d3274b284fd929c10c5795e4aeb80ec8a7c2b585dd05d4bec9b72eb0",
+    "vertices": 58177,
+    "layers": {
+     "testes": {
+      "meshes": 4,
+      "meanAO": 0.886,
+      "vertices": 1462
+     },
+     "ducts": {
+      "meshes": 7,
+      "meanAO": 0.665,
+      "vertices": 4257
+     },
+     "glands": {
+      "meshes": 5,
+      "meanAO": 0.954,
+      "vertices": 2614
+     },
+     "penis": {
+      "meshes": 4,
+      "meanAO": 0.676,
+      "vertices": 4096
+     },
+     "urinary": {
+      "meshes": 3,
+      "meanAO": 0.985,
+      "vertices": 2383
+     },
+     "gut": {
+      "meshes": 1,
+      "meanAO": 0.987,
+      "vertices": 771
+     },
+     "pelvic-floor": {
+      "meshes": 6,
+      "meanAO": 0.744,
+      "vertices": 9136
+     },
+     "artery": {
+      "meshes": 13,
+      "meanAO": 0.728,
+      "vertices": 11114
+     },
+     "vein": {
+      "meshes": 12,
+      "meanAO": 0.793,
+      "vertices": 16457
+     },
+     "bone": {
+      "meshes": 4,
+      "meanAO": 0.944,
+      "vertices": 5057
+     },
+     "scrotum": {
+      "meshes": 1,
+      "meanAO": 0.997,
+      "vertices": 830
+     }
+    }
+   }
+  }
+ }
+}
