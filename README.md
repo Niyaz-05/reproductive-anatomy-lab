@@ -1,5 +1,7 @@
 # Human Reproductive System — Interactive 3D Learning Lab
 
+**Live:** https://reproductive-anatomy-lab.vercel.app
+
 An interactive 3D female and male reproductive system for university anatomy and physiology:
 
 - **Two bodies.** Switch between the female and male body at any time (`?body=male` opens the male one). Every structure that has a homologue in the other body links to it ("Homologue: Testis (left) ↗"), and **Colour → Origin** paints both bodies by embryological origin (Müllerian duct, Wolffian duct, urogenital sinus, genital tubercle, folds and swellings, gonad).

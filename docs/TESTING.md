@@ -51,6 +51,7 @@ Results recorded on 2026-10-23 on Windows 11, Node 22.14.0. Browser tests ran in
 | Determinism | **Pass**: re-extraction and re-baking give byte-identical `female.glb` and `male.glb` |
 | `npm run build` | **Pass**. Vite warns about chunk size (1.88 MB of JavaScript, mostly three.js) |
 | `npm run e2e` | **Pass**: 25/25 over three runs (the first two were cut short when the computer slept; each test passed in its last run). Tests 1–3, 5–7 and 9–15 ran before the body-switch CSS fix below, which changes only that control's pointer events |
+| Live site (2026-10-26) | **Pass**: https://reproductive-anatomy-lab.vercel.app returns the page; `models/female.glb` and `models/male.glb` are served with their recorded sha256s (`38c00ebb3140…`, `a41c18f4d327…`); every mode, the body switch and the tour open in Chrome with no console errors (ready in 11.0 s) |
 | GPU check (Chrome, AMD Radeon, D3D11) | Every mode and all 24 tour steps render with no console errors; ready in about 10 s. Anatomy 61 fps, Cycle 61, Fertilisation 35, Pregnancy 30, Birth 21, Contraception 33, Disorders 61, Sperm 36, male Anatomy 61. The first visit to an animated view stalls for about a second while its shaders compile |
 
 ## Defects found and fixed during QA
