@@ -35,7 +35,7 @@ const num = async (page: Page, sel: string, a: string) => Number(await attr(page
 const pause = async (page: Page) => { const b = page.locator('aside.right').getByRole('button', { name: 'Pause' }); if (await b.count()) await b.click(); };
 const body = (page: Page, name: 'Female' | 'Male') => expect(radio(page, name)).toHaveAttribute('aria-checked', 'true');
 
-test('loads the female body without console errors and with a clean main screen', async ({ page }) => {
+test('loads the female body without console errors and with a clean main screen @smoke', async ({ page }) => {
   const errors = await open(page);
   await ready(page);
   await expect(page.getByRole('heading', { name: 'Reproductive System', level: 1 })).toBeVisible();
@@ -385,7 +385,7 @@ test('?body=male opens the male body, and the body switch takes a click', async 
   expect(errors).toEqual([]);
 });
 
-test('phone layout: structures open from the dock and details follow a pick', async ({ page }) => {
+test('phone layout: structures open from the dock and details follow a pick @smoke', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await open(page);
   await ready(page);
@@ -410,7 +410,7 @@ test('the About sheet holds the HuBMAP and BodyParts3D credits', async ({ page }
   await expect(dialog).toHaveCount(0);
 });
 
-test('without WebGL the learning content still works', async ({ page }) => {
+test('without WebGL the learning content still works @smoke', async ({ page }) => {
   await open(page, '?nowebgl');
   await expect(page.getByRole('heading', { name: '3D view unavailable' })).toBeVisible();
   await listButton(page, /^Ovary \(left\)$/).click();

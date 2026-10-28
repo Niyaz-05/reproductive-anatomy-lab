@@ -2,6 +2,8 @@
 
 **Live:** https://reproductive-anatomy-lab.vercel.app
 
+Works on phones and tablets: the details rise from the bottom in a sheet you can drag, fold or close with a swipe down, and picking a structure frames it above the sheet.
+
 An interactive 3D female and male reproductive system for university anatomy and physiology:
 
 - **Two bodies.** Switch between the female and male body at any time (`?body=male` opens the male one). Every structure that has a homologue in the other body links to it ("Homologue: Testis (left) ↗"), and **Colour → Origin** paints both bodies by embryological origin (Müllerian duct, Wolffian duct, urogenital sinus, genital tubercle, folds and swellings, gonad).
