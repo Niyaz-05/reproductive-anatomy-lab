@@ -70,6 +70,21 @@ for (const size of SIZES) {
   test.describe(`${size.name} ${size.width}×${size.height}`, () => {
     test.use({ viewport: { width: size.width, height: size.height }, hasTouch: size.touch, isMobile: size.touch && size.width < 1024 });
 
+    test(`the Female / Male switch is on screen, clear of the top bar, and switches the body`, async ({ page }) => {
+      const errors = await ready(page);
+      const toggle = page.locator('.body-switch');
+      await expect(toggle).toBeVisible();
+      await inside(page, toggle);
+      expect(overlap(await box(toggle), await box(page.locator('.top-actions'))), 'switch and top bar').toBe(0);
+      expect(overlap(await box(toggle), await box(page.locator('.identity h1'))), 'switch and title').toBe(0);
+      await page.getByRole('radio', { name: 'Male', exact: true }).click();
+      await expect(page.locator('.app')).toHaveAttribute('data-body', 'male');
+      await expect(page.locator('.viewer[data-ready="true"]')).toBeVisible({ timeout: 60_000 });
+      await page.getByRole('radio', { name: 'Female', exact: true }).click();
+      await expect(page.locator('.app')).toHaveAttribute('data-body', 'female');
+      expect(errors).toEqual([]);
+    });
+
     test(`layout fits the screen @smoke`, async ({ page }) => {
       const errors = await ready(page);
       await expect(page.locator('.app')).toHaveAttribute('data-layout', size.layout);
