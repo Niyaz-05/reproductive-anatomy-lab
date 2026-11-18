@@ -312,7 +312,7 @@ fieldset.plain:disabled { opacity: 0.6; }
 /* The Female / Male switch sits under the title, so the modes start below it. */
 .app[data-layout='sheet'] .body-switch { margin-block: 6px 0; }
 .app[data-layout='sheet'] .body-switch button { padding: 6px 14px; }
-.app[data-layout='sheet'] .top-actions { inset-block-start: calc(env(safe-area-inset-top) + 114px); inset-inline: calc(env(safe-area-inset-left) + 12px) calc(env(safe-area-inset-right) + 12px); }
+.app[data-layout='sheet'] .top-actions { inset-block-start: calc(env(safe-area-inset-top) + 120px); inset-inline: calc(env(safe-area-inset-left) + 12px) calc(env(safe-area-inset-right) + 12px); }
 .app[data-layout='sheet'] .left.mobile-open { inset: calc(var(--top-space, 120px) + 8px) 12px calc(var(--dock-space, 110px) + 8px); inline-size: auto; max-inline-size: 560px; margin-inline: auto; }
 .app[data-layout='sheet'] .right { inset: auto 0 0; margin-inline: auto; inline-size: 100%; max-inline-size: 720px; block-size: 38dvh; border-radius: 18px 18px 0 0; padding-block-end: env(safe-area-inset-bottom); transition: block-size 0.2s ease; }
 .app[data-layout='sheet'] .right[data-sheet='full'] { block-size: calc(100dvh - var(--top-space, 130px) - 10px - env(safe-area-inset-top)); }
